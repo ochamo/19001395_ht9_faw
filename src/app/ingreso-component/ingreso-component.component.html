@@ -1,0 +1,28 @@
+<div class="containerIngreso" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <form>
+        <mat-form-field>
+            <mat-label>
+                Nombre
+            </mat-label>
+            <input matInput type="text" formControlName="name">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>
+                Raza
+            </mat-label>
+            <input matInput type="text" formControlName="breed">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>
+                Nacimiento
+            </mat-label>
+            <input matInput formControlName="dateOfBirth" [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <button mat-flat-button type="submit" color="primary">Guardar</button>
+    </form>
+</div>
