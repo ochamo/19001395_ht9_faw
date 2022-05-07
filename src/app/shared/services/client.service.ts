@@ -16,11 +16,11 @@ export class ClientService {
   constructor(private httpClient: HttpClient) { }
 
   createPet(pet: Pet) {
-    return this.httpClient.post(environment.apiBackend + '/mascota', httpOptions);
+    return this.httpClient.post(environment.apiBackend + '/mascota', pet, httpOptions);
   }
 
   getPets() {
-    return this.httpClient.get<PetResponse>(environment + 'mascota', httpOptions);
+    return this.httpClient.get<PetResponse>(environment.apiBackend + '/mascota', httpOptions);
   }
 
 }

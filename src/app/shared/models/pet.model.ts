@@ -3,10 +3,10 @@ export class Pet {
     dateOfBirth: Date;
     breed: String;
 
-    constructor(name: String = '', dateOfBirth: Date = new Date(), breed: String = '') {
-        this.name = name;
-        this.dateOfBirth = dateOfBirth;
-        this.breed = breed;
+    constructor(Name: String = '', DateOfBirth: Date = new Date(), Breed: String = '') {
+        this.name = Name;
+        this.dateOfBirth = DateOfBirth;
+        this.breed = Breed;
     }
 
 }
